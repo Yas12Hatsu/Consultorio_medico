@@ -1,6 +1,6 @@
 # proyectos_flutter
 
-A new Flutter project.
+Front-end de la aplicación consultorio médico, se conecta a través de las apis del backend
 
 ## Getting Started
 
