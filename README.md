@@ -1,6 +1,7 @@
 # appwear
-
-A new Flutter project.
+Esta es la versión para Smartwatch, tiene las funcionalidades del usuario paciente (solo puede ver las citas que ha generado, los datalles y el estado de la cita que puede ser aceptada o rechazada)
+Esta versión esta adaptada para Smartwatch de tipo circular, disponible para version de android 13 y 14
+Front-end de la aplicación consultorio médico, se conecta a través de las apis del backend
 
 ## Getting Started
 
