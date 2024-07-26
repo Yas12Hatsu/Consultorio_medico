@@ -1,6 +1,7 @@
 # apptv
 
-A new Flutter project.
+Esta es la versión para Televisión, tiene las funcionalidades del usuario paciente (solo puede ver las citas que ha generado, los datalles y el estado de la cita que puede ser aceptada o rechazada) Esta versión esta adaptada para TV con resolución de 1280x1024
+Front-end de la aplicación consultorio médico, se conecta a través de las apis del backend
 
 ## Getting Started
 
