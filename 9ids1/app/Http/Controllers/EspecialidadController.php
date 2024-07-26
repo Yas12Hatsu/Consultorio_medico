@@ -65,4 +65,16 @@ class EspecialidadController extends Controller
        // return view('especialidad', compact('especialidad'));
     }
 
+    public function getEspecialidadNombre($idEspecialidad)
+    {
+        $especialidad = Especialidad::find($idEspecialidad);
+        
+        if ($especialidad) {
+            return response()->json(['nombre' => $especialidad->nombre]);
+        } else {
+            return response()->json(['message' => 'Especialidad no encontrada'], 404);
+        }
+    }    
+    
+
 }

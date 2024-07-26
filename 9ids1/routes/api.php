@@ -45,3 +45,17 @@ Route::post('login', [LoginController::class, 'login']);
 
 Route::post('paciente/crear', [PacienteController::class, 'storeUserPaciente']); 
 Route::post('cita/crear', [CitaController::class, 'store']); 
+Route::get('citas/{id}', [CitaController::class, 'show']); 
+Route::get('citas/list', [CitaController::class, 'list']);
+
+// Ruta para obtener citas por ID del paciente
+//Route::get('citas/paciente{id_paciente}', [CitaController::class, 'getCitasPorPaciente']);
+// Ruta para obtener citas por ID del paciente
+Route::get('citas/paciente/{idPaciente}', [CitaController::class, 'getCitasPorPaciente']);
+
+Route::get('especialidad/{idEspecialidad}', [EspecialidadController::class, 'getEspecialidadNombre']);
+
+Route::get('doctor/{idDoctor}', [DoctorController::class, 'getDoctorNombre']);
+
+//Route::get('api/especialidades/{id}', [EspecialidadController::class, 'getEspecialidadPorId']);
+

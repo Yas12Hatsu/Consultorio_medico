@@ -65,4 +65,15 @@ class DoctorController extends Controller
         
     }
 
+    public function getDoctorNombre($idDoctor)
+    {
+        $doctor = Doctor::find($idDoctor);
+        
+        if ($doctor) {
+            return response()->json(['nombre' => $doctor->nombre]);
+        } else {
+            return response()->json(['message' => 'Doctor no encontrado'], 404);
+        }
+    }    
+
 }
