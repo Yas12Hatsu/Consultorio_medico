@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www
+    networks:
+      - app-network
+    depends_on:
+      - db
+    environment:
+      APP_ENV: local
+      APP_DEBUG: true
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: 9ids1
+      DB_USERNAME: postgres
+      DB_PASSWORD: root
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: 9ids1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
